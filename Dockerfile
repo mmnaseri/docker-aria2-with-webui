@@ -8,7 +8,7 @@ RUN mkdir -p /conf && \
 	apk add --no-cache tzdata bash aria2 darkhttpd
 
 RUN	apk add --no-cache git && \
-	git clone https://github.com/ziahamza/webui-aria2 /aria2-webui && \
+	git clone --depth 1 https://github.com/ziahamza/webui-aria2 /aria2-webui && \
 	apk del git
 
 ADD files/start.sh /conf-copy/start.sh
