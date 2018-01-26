@@ -1,18 +1,25 @@
-Aria2, with integrated Aria2-WebUI
+Aria2, with integrated Aria2-WebUI and Aria2-NG Frontends
 ---
 
 This is my fork of `XUJINKAI/aria2-with-webui`'s docker container, which is
 excellent, but didn't fix my exact use case. For some reason it's quite hard to
-find an somewhat up-to-date Aria2 build, let alone Aria2-WebUI.
+find an somewhat up-to-date Aria2 build, let alone Aria2-WebUI or NG front-ends.
 
 This container uses the latest Alpine linux build, along with the latest stable
-Aria2 client (from Alpine's package repository) and bleeding-edge Aria2-WebUI.
-In practice both are quite stable, so the chances of a broken WebUI is minimal.
+Aria2 client (from Alpine's package repository) and bleeding-edge Aria2-WebUI or
+latest release Aria2-NG front-end. In practice both are quite stable, so the
+chances of a broken WebUI is minimal.
 
 Builds for this container are triggered by `Alpine` container updates, so it
-should remain up-to-date as newer Alpine/Aria2 versions become available. I will
-also trigger periodic rebuilds manually every now and then if significant WebUI
-changes are made that warrant an out-of-band update.
+should remain up-to-date as newer Alpine/Aria2 versions become available.
+
+## Tags:
+
+`latest`: Same as `latest-webui`.
+
+`latest-webui`: Latest Aria2 with the [Aria2-WebUI](https://github.com/timonier/webui-aria2) frontend
+
+`latest-ng`: Latest Aria2 with the [Aria2-NG](https://github.com/mayswind/AriaNg) frontend
 
 ## Configuration:
 
