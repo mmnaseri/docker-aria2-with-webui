@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+echo "Waiting 10 seconds while the host environment becomes ready ..."
+sleep 10
+
+echo "Starting the user interface"
+
 PUID=${PUID:=0}
 PGID=${PGID:=0}
 
