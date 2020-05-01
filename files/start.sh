@@ -20,4 +20,4 @@ chown $PUID:$PGID /logs.txt
 
 darkhttpd /aria2-webui/docs --port 80 &
 
-exec s6-setuidgid $PUID:$PGID aria2c --conf-path=/conf/aria2.conf --log=/logs.txt
+exec s6-setuidgid $PUID:$PGID aria2c --disable-ipv6=true --conf-path=/conf/aria2.conf --log=/logs.txt
