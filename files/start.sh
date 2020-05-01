@@ -20,4 +20,6 @@ chown $PUID:$PGID /logs.txt
 
 darkhttpd /aria2-webui/docs --port 80 &
 
+echo "Your public IP is $(wget -qO- https://ipecho.net/plain ; echo)"
+
 exec s6-setuidgid $PUID:$PGID aria2c --disable-ipv6=true --conf-path=/conf/aria2.conf --log=/logs.txt
