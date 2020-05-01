@@ -11,6 +11,8 @@ RUN	apk add --no-cache git && \
 	git clone --depth 1 https://github.com/ziahamza/webui-aria2 /aria2-webui && \
 	apk del git
 
+RUN apk add --no-cache wget
+
 ADD files/start.sh /conf-copy/start.sh
 ADD files/aria2.conf /conf-copy/aria2.conf
 
